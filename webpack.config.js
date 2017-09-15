@@ -8,7 +8,7 @@ module.exports = {
     filename: 'bundle.js',
     sourceMapFilename: 'bundle.map'
   },
-  devtool: '#source-map',
+  devtool: 'source-map',
   module: {
     loaders: [{
       test: /\.js$/,
@@ -19,11 +19,17 @@ module.exports = {
       }
     },
     {
-      test: /\.css$/,
-      use: ['style-loader', 'css-loader', {
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader', {
         loader: 'postcss-loader',
         options: {
-          plugins: () => [require('autoprefixer')]
+          plugins: () => [require('autoprefixer')],
+          sourceMap: true
+        }
+      }, {
+        loader: 'sass-loader',
+        options: {
+          sourceMap: true
         }
       }]
     }]
