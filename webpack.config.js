@@ -10,29 +10,28 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    loaders: [{
-      test: /\.js$/,
-      exclude: /(node_modules)/,
-      loader: 'babel-loader',
-      options: {
-        presets: ['env', 'stage-0', 'react']
+    loaders: [
+      {
+        test: /\.js$/,
+        exclude: /(node_modules)/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['env', 'stage-0', 'react']
+        }
+      },
+      {
+        test: /\.css$/,
+        loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
+      },
+      {
+        test: /\.scss$/,
+        loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+      },
+      {
+        test: /\.(png|jpg|gif|woff|woff2)$/,
+        loaders: ['url-loader']
       }
-    },
-    {
-      test: /\.scss$/,
-      use: ['style-loader', 'css-loader', 'sass-loader', {
-        loader: 'postcss-loader',
-        options: {
-          plugins: () => [require('autoprefixer')],
-          sourceMap: true
-        }
-      }, {
-        loader: 'sass-loader',
-        options: {
-          sourceMap: true
-        }
-      }]
-    }]
+    ]
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
