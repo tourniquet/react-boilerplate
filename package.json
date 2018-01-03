@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --open --colors --progress --config webpack.config.js",
+    "start": "webpack-dev-server --open --colors --progress",
     "build": "webpack"
   },
   "author": "",
@@ -28,8 +28,8 @@
     "webpack-dev-server": "^2.9.3"
   },
   "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2"
   }
 }
