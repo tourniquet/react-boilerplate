@@ -4,13 +4,13 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist/'),
-    filename: 'bundle.js',
-    sourceMapFilename: 'bundle.map'
+    path: path.resolve(__dirname, 'public/'),
+    filename: 'js/bundle.js',
+    sourceMapFilename: 'js/bundle.map'
   },
   devtool: 'source-map',
   devServer: {
-    contentBase: './',
+    contentBase: './public',
     historyApiFallback: true,
     port: 8080
   },
