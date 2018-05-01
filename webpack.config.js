@@ -2,6 +2,7 @@ const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
+  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'public/'),
@@ -12,10 +13,10 @@ module.exports = {
   devServer: {
     contentBase: './public',
     historyApiFallback: true,
-    port: 8080
+    port: 3000
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js$/,
         exclude: /(node_modules)/,
