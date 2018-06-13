@@ -4,7 +4,7 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // components
-import Body from './components/Body'
+import StatelessComponent from './components/StatelessComponent'
 
 import reducer from './config/reducer'
 const store = createStore(
@@ -15,7 +15,9 @@ const store = createStore(
 const App = () => {
   return (
     <Provider store={store}>
-      <Body />
+      <div>
+        <StatelessComponent />
+      </div>
     </Provider>
   )
 }
