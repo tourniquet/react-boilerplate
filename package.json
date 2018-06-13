@@ -8,6 +8,9 @@
     "dev": "webpack-dev-server --content-base=public/",
     "build": "webpack --mode=production"
   },
+  "jest": {
+    "setupTestFrameworkScriptFile": "./enzyme.config.js"
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -18,9 +21,13 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.7",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.1.0",
+    "jest-enzyme": "^6.0.1",
     "node-sass": "^4.5.3",
     "postcss-loader": "^2.0.6",
+    "react-addons-test-utils": "^15.6.2",
     "react-test-renderer": "^16.4.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^7.0.1",

@@ -3,7 +3,7 @@
 ### Features
 * React
 * Redux
-* Jest
+* Jest / Enzyme
 * Webpack
 
 ### Quick start

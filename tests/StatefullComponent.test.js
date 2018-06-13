@@ -1,7 +1,7 @@
 /* globals describe, test, expect */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import { createStore } from 'redux'
 
 import ConnectedApp from '../src/components/StatefullComponent'
@@ -13,14 +13,11 @@ const store = createStore(
 
 describe('StatefullComponent', () => {
   test('render StatefullComponent', () => {
-    const component = renderer.create(
+    const wrapper = shallow(
       <ConnectedApp store={store} />
-    )
+    ).dive()
 
-    const tree = component.toJSON()
-    const firstChild = tree.children[0]
-
-    expect(firstChild).toBe('Hello, world!')
-    expect(firstChild).not.toBe('undefined')
+    expect(wrapper.find('div')).toHaveLength(1)
+    expect(wrapper.contains('Hello, world!')).toBe(true)
   })
 })

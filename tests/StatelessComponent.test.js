@@ -1,19 +1,16 @@
 /* globals describe, test, expect */
 
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
 import StatelessComponent from '../src/components/StatelessComponent'
 
 describe('StatelessComponent', () => {
   test('render StatelessComponent', () => {
-    const component = renderer.create(
+    const wrapper = shallow(
       <StatelessComponent />
     )
 
-    const tree = component.toJSON()
-    const firstChild = tree.children[0]
-
-    expect(firstChild).toBe('Hello, world!')
-    expect(firstChild).not.toBe('undefined')
+    expect(wrapper.find('div')).toHaveLength(1)
+    expect(wrapper.contains('Hello, world!')).toBe(true)
   })
 })
