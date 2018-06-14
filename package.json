@@ -9,7 +9,10 @@
     "build": "webpack --mode=production"
   },
   "jest": {
-    "setupTestFrameworkScriptFile": "./enzyme.config.js"
+    "setupTestFrameworkScriptFile": "./enzyme.config.js",
+    "moduleNameMapper": {
+      "^.+\\.(css|less|scss)$": "babel-jest"
+    }
   },
   "author": "",
   "license": "ISC",
