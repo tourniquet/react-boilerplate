@@ -1,5 +1,5 @@
 import React from 'react'
 
-const StatelessComponent = () => <div>Hello, world!</div>
+const StatelessComponent = () => <div>Stateless component</div>
 
 export default StatelessComponent

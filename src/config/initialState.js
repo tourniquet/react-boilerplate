@@ -1,5 +1,5 @@
 const initialState = {
-  text: 'Hello, world!'
+  text: 'Statefull component'
 }
 
 export default initialState

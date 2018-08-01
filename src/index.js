@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 
 // components
 import StatelessComponent from './components/StatelessComponent'
+import StatefullComponent from './components/StatefullComponent'
 
 import reducer from './config/reducer'
 const store = createStore(
@@ -12,15 +13,13 @@ const store = createStore(
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 
-const App = () => {
-  return (
-    <Provider store={store}>
-      <div>
-        <StatelessComponent />
-      </div>
-    </Provider>
-  )
-}
+const App = () =>
+  <Provider store={store}>
+    <div>
+      <StatelessComponent />
+      <StatefullComponent />
+    </div>
+  </Provider>
 
 render(
   <App />,
