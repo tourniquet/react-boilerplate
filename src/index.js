@@ -4,8 +4,8 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // components
-import StatelessComponent from './components/StatelessComponent'
-import StatefullComponent from './components/StatefullComponent'
+import StatelessComponent from './components/StatelessComponent/StatelessComponent'
+import StatefullComponent from './components/StatefullComponent/StatefullComponent'
 
 import reducer from './config/reducer'
 const store = createStore(

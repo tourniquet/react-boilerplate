@@ -4,9 +4,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { createStore } from 'redux'
 
-import ConnectedApp from '../src/components/StatefullComponent'
+import ConnectedApp from './StatefullComponent'
 
-import reducer from '../src/config/reducer'
+import reducer from '../../config/reducer'
 const store = createStore(
   reducer
 )
@@ -18,6 +18,6 @@ describe('StatefullComponent', () => {
     ).dive()
 
     expect(wrapper.find('div')).toHaveLength(1)
-    expect(wrapper.contains('Hello, world!')).toBe(true)
+    expect(wrapper.contains('Statefull component')).toBe(true)
   })
 })

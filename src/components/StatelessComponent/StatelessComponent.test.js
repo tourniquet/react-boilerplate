@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { shallow } from 'enzyme'
-import StatelessComponent from '../src/components/StatelessComponent'
+import StatelessComponent from './StatelessComponent'
 
 describe('StatelessComponent', () => {
   test('render StatelessComponent', () => {
@@ -11,6 +11,6 @@ describe('StatelessComponent', () => {
     )
 
     expect(wrapper.find('div')).toHaveLength(1)
-    expect(wrapper.contains('Hello, world!')).toBe(true)
+    expect(wrapper.contains('Stateless component')).toBe(true)
   })
 })
