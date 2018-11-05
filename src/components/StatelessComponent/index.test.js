@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { shallow } from 'enzyme'
-import StatelessComponent from './StatelessComponent'
+import StatelessComponent from '..'
 
 describe('StatelessComponent', () => {
   test('render StatelessComponent', () => {

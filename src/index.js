@@ -4,10 +4,10 @@ import { createStore } from 'redux'
 import { Provider } from 'react-redux'
 
 // components
-import StatelessComponent from './components/StatelessComponent/StatelessComponent'
-import StatefullComponent from './components/StatefullComponent/StatefullComponent'
+import StatelessComponent from './components/StatelessComponent'
+import StatefullComponent from './components/StatefullComponent'
 
-import reducer from './config/reducer'
+import reducer from './reducers/reducer'
 const store = createStore(
   reducer,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
