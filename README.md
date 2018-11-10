@@ -3,6 +3,7 @@
 ### Features
 * React
 * Redux
+* styled-components
 * Jest / Enzyme
 * Webpack
 
