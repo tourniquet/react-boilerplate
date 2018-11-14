@@ -4,9 +4,9 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import { createStore } from 'redux'
 
-import ConnectedApp from '..'
+import ConnectedApp from './index'
 
-import reducer from '../../config/reducer'
+import reducer from '../../reducers/reducer'
 const store = createStore(
   reducer
 )
