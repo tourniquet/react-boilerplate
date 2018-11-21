@@ -1,5 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 
-const StatelessComponent = () => <div>Stateless component</div>
+const DivStyled = styled.div`
+  color: red;
+`
+
+const StatelessComponent = () => <DivStyled>Stateless component</DivStyled>
 
 export default StatelessComponent

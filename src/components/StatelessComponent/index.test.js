@@ -1,16 +1,20 @@
-/* globals describe, test, expect */
-
 import React from 'react'
 import { shallow } from 'enzyme'
-import StatelessComponent from './index'
+
+import StatelessComponent from './index.js'
+
+const wrapper = shallow(<StatelessComponent />)
 
 describe('StatelessComponent', () => {
-  test('render StatelessComponent', () => {
-    const wrapper = shallow(
-      <StatelessComponent />
-    )
+  it('render StatelessComponent', () => {
+    expect(wrapper).toHaveLength(1)
+  })
 
-    expect(wrapper.find('div')).toHaveLength(1)
+  it('should render "Stateless component"', () => {
     expect(wrapper.contains('Stateless component')).toBe(true)
+  })
+
+  it('should not render "Hello, world!"', () => {
+    expect(wrapper.contains('Hello, world!')).toBe(false)
   })
 })

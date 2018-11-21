@@ -8,6 +8,9 @@
     "dev": "webpack-dev-server --content-base=build/",
     "build": "webpack --mode=production"
   },
+  "standard": {
+    "globals": ["describe", "expect", "it"]
+  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -22,11 +25,9 @@
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "jest": "^23.1.0",
-    "jest-enzyme": "^6.0.1",
     "node-sass": "^4.10.0",
     "postcss-loader": "^2.0.6",
     "react-addons-test-utils": "^15.6.2",
-    "react-test-renderer": "^16.4.0",
     "resolve-url-loader": "^2.1.0",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0",
