@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import { createStore } from 'redux'
 import { Provider } from 'react-redux'
+import { Helmet } from 'react-helmet'
 
 // components
 import StatelessComponent from './components/StatelessComponent'
@@ -16,6 +17,10 @@ const store = createStore(
 const App = () =>
   <Provider store={store}>
     <div>
+      <Helmet>
+        <title>React boilerplate</title>
+      </Helmet>
+
       <StatelessComponent />
       <StatefullComponent />
     </div>
