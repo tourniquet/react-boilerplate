@@ -6,6 +6,7 @@
 * styled-components
 * Jest / Enzyme
 * Webpack
+* React Helmet
 
 ### Quick start
 Clone this repo using git clone https://github.com/tourniquet/react-boilerplate.git.
