@@ -5,8 +5,8 @@ import { Provider } from 'react-redux'
 import { Helmet } from 'react-helmet'
 
 // components
-import StatelessComponent from './components/StatelessComponent'
-import StatefullComponent from './components/StatefullComponent'
+import StatelessComponent from './components/StatelessComponent/StatelessComponent'
+import StatefullComponent from './components/StatefullComponent/StatefullComponent'
 
 import reducer from './reducers/reducer'
 const store = createStore(
