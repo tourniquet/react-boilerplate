@@ -1,9 +1,7 @@
+import { Helmet } from 'react-helmet'
 import React, { Fragment } from 'react'
-import styled from 'styled-components'
 
-const DivStyled = styled.div`
-  color: red;
-`
+import './StatelessComponent.less'
 
 const StatelessComponent = () =>
   <Fragment>
@@ -11,7 +9,9 @@ const StatelessComponent = () =>
       <title>StatelessComponent - React Boilerplate</title>
     </Helmet>
 
-    <DivStyled>Stateless component</DivStyled>
+    <span className='stateless-component'>
+      Stateless component
+    </span>
   </Fragment>
 
 export default StatelessComponent

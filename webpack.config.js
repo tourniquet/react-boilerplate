@@ -31,11 +31,23 @@ module.exports = {
         loaders: ['style-loader', 'css-loader', 'resolve-url-loader']
       },
       {
-        test: /\.scss$/,
-        loaders: ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap']
+        test: /\.s(a|c)ss$/,
+        loaders: ['css-loader', 'sass-loader?sourceMap']
       },
       {
-        test: /\.(png|jpg|gif|woff|woff2)$/,
+        test: /\.less$/,
+        loaders: [
+          'css-loader',
+          {
+            loader: 'less-loader',
+            options: {
+              javasscriptEnabled: true
+            }
+          }
+        ],
+      },
+      {
+        test: /\.(png|jpe?g|gif|woff|woff2)$/,
         loaders: ['url-loader']
       }
     ]

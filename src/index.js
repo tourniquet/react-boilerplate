@@ -1,10 +1,12 @@
-import React from 'react'
-import { render } from 'react-dom'
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom'
 import { createStore } from 'redux'
-import { Provider } from 'react-redux'
 import { Helmet } from 'react-helmet'
+import { Provider } from 'react-redux'
+import { render } from 'react-dom'
+import React, { Fragment } from 'react'
 
 // components
+import IndexComponent from './components/IndexComponent/IndexComponent'
 import StatelessComponent from './components/StatelessComponent/StatelessComponent'
 import StatefullComponent from './components/StatefullComponent/StatefullComponent'
 
@@ -16,17 +18,25 @@ const store = createStore(
 
 const App = () =>
   <Provider store={store}>
-    <div>
+    <Fragment>
       <Helmet>
         <title>React boilerplate</title>
       </Helmet>
+    </Fragment>
 
-      <StatelessComponent />
-      <StatefullComponent />
-    </div>
+    <Switch>
+      <Route path='/' exact component={IndexComponent} />
+      <Route path='/statefull' component={StatefullComponent} />
+      <Route path='/stateless' component={StatelessComponent} />
+      <Route path='/redirect'>
+        <Redirect to='/redirect' />
+      </Route>
+    </Switch>
   </Provider>
 
 render(
-  <App />,
+  <Router>
+    <App />
+  </Router>,
   document.querySelector('#container')
 )
