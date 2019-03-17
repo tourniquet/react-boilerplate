@@ -1,5 +1,5 @@
 const initialState = {
-  text: 'Statefull component'
+  text: 'src/components/StatefullComponent/StatefullComponent.js'
 }
 
 export default initialState

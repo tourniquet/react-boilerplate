@@ -1,3 +1,12 @@
-.statefull-component {
-  color: green;
+.container {
+  align-items: center;
+  background: #E9ECEF;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+
+  .statefull-component {
+    color: red;
+  }
 }

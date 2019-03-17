@@ -1,27 +1,58 @@
 import { Link } from 'react-router-dom'
 import React, { Fragment } from 'react'
+import styled from 'styled-components'
+
+const Header = styled.div`
+  align-items: center;
+  background: #E9ECEF;
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+`
+
+const Body = styled.div`
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+
+  a {
+    color: #007BFF;
+    text-decoration: none;
+
+    &:hover {
+      color: #0062CC;
+      text-decoration: underline;
+    }
+  }
+`
+
+const Span = styled.span``
 
 const IndexComponent = () =>
   <Fragment>
-    <Link
-      to={{ pathname: '/stateless' }}
-    >
-      <h2>Stateless component</h2>
-    </Link>
+    <Header>
+      <h1>Hello, world!</h1>
+    </Header>
 
-    <Link
-      to={{ pathname: '/statefull' }}
-    >
-      <h2>Sstatefull component</h2>
-    </Link>
+    <Body>
+      <Link
+        to={{ pathname: '/stateless' }}
+      >
+        <Span>Stateless component</Span>
+      </Link>
 
-    <Link
-      to={{ pathname: '/redirect' }}
-    >
-      <h2>Redirect</h2>
-    </Link>
+      <Link
+        to={{ pathname: '/statefull' }}
+      >
+        <Span>Statefull component</Span>
+      </Link>
 
-      <h1>Index component</h1>
+      <Link
+        to={{ pathname: '/redirect' }}
+      >
+        <Span>Redirect</Span>
+      </Link>
+    </Body>
   </Fragment>
 
 export default IndexComponent

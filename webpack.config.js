@@ -32,11 +32,12 @@ module.exports = {
       },
       {
         test: /\.s(a|c)ss$/,
-        loaders: ['css-loader', 'sass-loader?sourceMap']
+        loaders: ['style-loader', 'css-loader', 'sass-loader?sourceMap']
       },
       {
         test: /\.less$/,
         loaders: [
+          'style-loader',
           'css-loader',
           {
             loader: 'less-loader',
@@ -44,7 +45,7 @@ module.exports = {
               javasscriptEnabled: true
             }
           }
-        ],
+        ]
       },
       {
         test: /\.(png|jpe?g|gif|woff|woff2)$/,
